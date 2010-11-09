@@ -1,4 +1,6 @@
 TddDemo::Application.routes.draw do
+
+  resources :articles, :only => [ :new, :create, :index ]
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
