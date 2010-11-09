@@ -35,4 +35,7 @@ group :development, :test do
   gem 'shoulda'
   gem 'mocha'
   gem 'factory_girl_rails'
+  gem 'autotest'
+  gem 'autotest-rails-pure'
+  #gem 'autotest-growl'
 end
