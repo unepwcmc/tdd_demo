@@ -13,12 +13,13 @@ module NavigationHelpers
 
       when /the new article page/
         new_article_path
-        
-      when /the articles list page/
+
+      when /the article list page/
         articles_path
 
-      when /path "(.+)"/
-        $1
+      when /the show page for (.+)/
+        polymorphic_path(model($1))
+
 
       # Add more mappings here.
       # Here is an example that pulls values out of the Regexp:

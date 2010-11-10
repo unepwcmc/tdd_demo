@@ -42,4 +42,15 @@ class ArticlesControllerTest < ActionController::TestCase
     should render_template(:index)
   end
 
+  context "on GET to :show the article" do
+    setup do
+      @article = Factory(:article, :id => 1)
+      get :show, :id => @article.id
+    end
+
+    should assign_to(:article)
+    should respond_with(:success)
+    should render_template(:show)
+  end
+
 end
